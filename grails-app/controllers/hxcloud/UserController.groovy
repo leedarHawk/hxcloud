@@ -2,12 +2,14 @@ package hxcloud
 
 import grails.converters.JSON
 import grails.transaction.Transactional
+import redis.clients.jedis.Jedis
 
 class UserController {
 
     def userService
     def mailService
     def grailsApplication
+    def redisService
 
     def index() {
         def userList = User.list()
@@ -35,6 +37,11 @@ class UserController {
 
         def rtn = [name: "hawk", pass: "zzz"]
         rtn.user =  user
+
+        redisService.withRedis{ Jedis redis ->
+
+
+        }
 
         render rtn as JSON
     }
