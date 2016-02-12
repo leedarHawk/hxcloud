@@ -1,5 +1,6 @@
 package hxcloud
 
+import grails.converters.JSON
 import grails.transaction.Transactional
 
 class UserController {
@@ -26,6 +27,18 @@ class UserController {
         user.save(flush: true)
         render view:'create'
     }
+
+    def testJson(){
+        def json = request.JSON
+        println json
+        def user = new User(mobile:"123129874")
+
+        def rtn = [name: "hawk", pass: "zzz"]
+        rtn.user =  user
+
+        render rtn as JSON
+    }
+
 
     def update(User user){
         user.username = "zzz"
