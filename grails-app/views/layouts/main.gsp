@@ -18,10 +18,11 @@
 	</head>
 	<body>
 		<div class="container">
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
-		<g:layoutBody/>
+			<div class="header">
+				<div class="logo fl"><a href="index.html"><img src="../images/logo.png" /></a></div>
+			</div>
+			<g:layoutBody/>
 			<div class="copy">Copyright © 2016 北京华信信通科技发展有限公司  版权所有  京ICP备112334421号</div>
-			<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		</div>
 	</body>
 </html>

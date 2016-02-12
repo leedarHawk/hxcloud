@@ -6,6 +6,7 @@ class UserController {
 
     def userService
     def mailService
+    def grailsApplication
 
     def index() {
         def userList = User.list()
@@ -32,9 +33,18 @@ class UserController {
         render view:"index"
     }
 
-    def sendMail() {
-        mailService.sendMail{to "kevin-yt.zhang@aia.com"
-            subject "Hello Kevin"
-            body 'How are you?' }
+    def sendMail(User user) {
+        grailsApplication.config.grails.conf
+        def from ="hawk.wan@139.com"
+        try{
+            mailService.sendMail{to
+                from "275691475@qq.com"
+                subject "Hello Kevin"
+                body 'How are you?' }
+        }catch(Exception e){
+            log.error(e)
+        }
+
+        render view:'create'
     }
 }

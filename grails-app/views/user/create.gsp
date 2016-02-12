@@ -14,10 +14,7 @@
 </head>
 
 <body>
-<div class="container col-lg-6">
-    <g:each in="userList" item="user">
-        html....
-    </g:each>
+<div style="margin: 10px">
     <g:form action="save" class="form-horizontal">
         <input name="mobile" class="form-control">
         <g:link action="sendMail">aaa</g:link>
