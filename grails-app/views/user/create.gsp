@@ -20,6 +20,7 @@
     </g:each>
     <g:form action="save" class="form-horizontal">
         <input name="mobile" class="form-control">
+        <g:link action="sendMail">aaa</g:link>
         <g:submitButton name="save" class="btn btn-danger"></g:submitButton>
     </g:form>
 </div>

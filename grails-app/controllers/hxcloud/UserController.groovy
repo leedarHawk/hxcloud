@@ -5,6 +5,7 @@ import grails.transaction.Transactional
 class UserController {
 
     def userService
+    def mailService
 
     def index() {
         def userList = User.list()
@@ -29,5 +30,11 @@ class UserController {
         user.username = "zzz"
         user.save()
         render view:"index"
+    }
+
+    def sendMail() {
+        mailService.sendMail{to "kevin-yt.zhang@aia.com"
+            subject "Hello Kevin"
+            body 'How are you?' }
     }
 }
