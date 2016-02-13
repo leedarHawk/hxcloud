@@ -112,8 +112,7 @@
                         </div>
                         <!-- 手机注册 -->
                         <div  id="con_RegTab_2" style="display: none;" class="reg-tab-bd">
-                            <form class="rform" id=regist-mobile action="mobileRegister"
-                                  method="post">
+                            <g:form class="rform" action="mobileRegister" method="post">
                                 <table class="table">
                                     <input name="mode" value="1" type="hidden">
                                     <tr>
@@ -152,12 +151,11 @@
                                         </td>
                                     </tr>
                                 </table>
-                            </form>
+                            </g:form>
                         </div>
                         <!-- 邮箱注册 -->
                         <div style="display: block;" id="con_RegTab_1" class="reg-tab-bd">
-                            <form class="rform" id="regist-email" action="emailRegister"
-                                  method="post">
+                            <g:form class="rform" action="emailRegister" method="post">
                                 <table class="table">
                                     <input name="mode" value="2" type="hidden">
                                     <tr>
@@ -188,9 +186,8 @@
                                         </td>
                                     </tr>
                                 </table>
-                            </form>
+                            </g:form>
                         </div>
-
                     </div>
                 </div>
             </div>

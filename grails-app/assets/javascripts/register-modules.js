@@ -323,7 +323,7 @@
                 }
                 e.hide();
                 b.ajax({
-                       url:"sendVerifyCode.action",
+                       url:"sendVerifyCode",
                        type:"POST",
                        data:{mobile:b.trim(c.val())},
                        dataType:"json",
@@ -351,7 +351,7 @@
                 }
                 e.hide();
                 b.ajax({
-                       url:"sendVerifyCode.action",
+                       url:"sendVerifyCode",
                        type:"POST",
                        data:{sendurl:b.trim(c.val()),type:'mobile'},
                        dataType:"json",
@@ -379,7 +379,7 @@
                 }
                 e.hide();
                 b.ajax({
-                       url:"sendVerifyCode.action",
+                       url:"sendVerifyCode",
                        type:"POST",
                        data:{sendurl:b.trim(c.val()),type:'email'},
                        dataType:"json",

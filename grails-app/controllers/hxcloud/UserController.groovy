@@ -3,6 +3,7 @@ package hxcloud
 import grails.converters.JSON
 import grails.transaction.Transactional
 import redis.clients.jedis.Jedis
+import com.huaxincloud.platform.utils.RandomUtil
 
 class UserController {
 
@@ -22,11 +23,11 @@ class UserController {
 
     @Transactional
     def save(User user){
-        userService.serviceMethod()
-        println User.list()
+        //userService.serviceMethod()
+        //println User.list()
         println user.mobile
-        user.username = "aaa"
-        user.save(flush: true)
+        //user.userName = "aaa"
+        //user.save(flush: true)
         render view:'create'
     }
 
@@ -48,7 +49,7 @@ class UserController {
 
 
     def update(User user){
-        user.username = "zzz"
+        user.userName = "zzz"
         user.save()
         render view:"index"
     }
@@ -73,6 +74,52 @@ class UserController {
     }
 
     def check() {
+        def rtn = null
+        def logName = request.getParameter('logName')
+        def c = User.createCriteria()
+        def resCount = c.count {
+            and {
+                eq("logName", logName)
+            }
+        }
+        if(resCount > 0) {
+            rtn = ["msg" : false]
+        }
+        else {
+            rtn = ["msg" : true]
+        }
+        render rtn as JSON
+    }
 
+    def checkCode() {
+        def rtn = null
+        def code = request.getParameter("code");
+        if(code.equalsIgnoreCase(session.getAttribute("code"))) {
+            rtn = ["msg" : true]
+        }
+        else {
+            rtn = ["msg" : false]
+        }
+        render rtn as JSON
+    }
+
+    def sendVerifyCode() {
+        def verifyCode = RandomUtil.createRandom(true, 6);
+        def mobile = request.getParameter("mobile");
+    }
+
+    /**
+     * 检验手机验证码
+     */
+    def checkMobileCode() {
+
+    }
+
+    def emailRegister(User user) {
+        println user.logName
+    }
+
+    def mobileRegister(User user) {
+        println user.logName
     }
 }

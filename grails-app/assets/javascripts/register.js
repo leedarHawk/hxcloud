@@ -17,7 +17,7 @@
 			{
 			  exec:function(){
 			     $.ajax({
-				    url : 'check.action',
+				    url : 'check',
 				    type: "POST",
 				    async:false,
 				    dataType:"json",
@@ -191,7 +191,7 @@
             {
 			  exec:function(){
 			     $.ajax({
-				    url : 'checkCode.action',
+				    url : 'checkCode',
 				    type:"POST",
 				    async:false,
 				    dataType:"json",
@@ -211,7 +211,7 @@
             {
 			  exec:function(){
 			     $.ajax({
-				    url : 'checkCode.action',
+				    url : 'checkCode',
 				    type:"POST",
 				    async:false,
 				    dataType:"json",
@@ -235,7 +235,7 @@
 			{
 			  exec:function(){
 			     $.ajax({
-				    url : 'check.action',
+				    url : 'check',
 				    type:"POST",
 				    async:false,
 				    dataType:"json",
@@ -259,7 +259,7 @@
 			{
 			  exec:function(){
 			     $.ajax({
-				    url : 'checkMobileCode.action',
+				    url : 'checkMobileCode',
 				    type:"POST",
 				    async:false,
 				    dataType:"json",
