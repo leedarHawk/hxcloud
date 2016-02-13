@@ -17,11 +17,51 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<div class="container">
+		<div class="">
 			<div class="header">
-				<div class="logo fl"><a href="index.html"><img src="../images/logo.png" /></a></div>
+				<div class="logo fl"><a href="index.html"><img src="${request.getContextPath()}/images/logo.png" /></a></div>
 			</div>
+			<div class="navbar-default sidebar" role="navigation">
+				<div class="sidebar-nav navbar-collapse">
+					<ul class="nav" id="side-menu">
+						<li>
+							<a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 首页</a>
+
+						</li>
+						<li>
+							<a href=""><i class="fa fa-dashboard fa-fw"></i> 用户<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li>
+									<a href="flot.html">完善用户信息</a>
+								</li>
+								<li>
+									<a href="morris.html">修改密码</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> 产品<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li>
+									<a href="flot.html">添加产品</a>
+								</li>
+								<li>
+									<a href="morris.html">添加产品属性</a>
+								</li>
+							</ul>
+							<!-- /.nav-second-level -->
+						</li>
+						<li>
+							<a href="tables.html"><i class="fa fa-table fa-fw"></i> 订单</a>
+						</li>
+
+					</ul>
+				</div>
+				<!-- /.sidebar-collapse -->
+			</div>
+			<div id="page-wrapper">
 			<g:layoutBody/>
+				</div>
 			<div class="copy">Copyright © 2016 北京华信信通科技发展有限公司  版权所有  京ICP备112334421号</div>
 		</div>
 	</body>

@@ -17,3 +17,4 @@ stacktrace.log
 /target-eclipse/
 /.idea/workspace.xml
 /web-app/apks
+bower_components/

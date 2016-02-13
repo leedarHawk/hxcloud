@@ -8,9 +8,10 @@
 //= require jquery
 //= require_tree .
 //= require_self
-//= require mentisMenu
 //= require register
 //= require register-modules
+//= require metisMenu
+//= require sb-admin-2
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {

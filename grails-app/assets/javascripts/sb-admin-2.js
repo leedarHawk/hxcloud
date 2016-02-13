@@ -1,3 +1,4 @@
+console.log("aaa");
 $(function() {
 
     $('#side-menu').metisMenu();
