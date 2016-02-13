@@ -11,7 +11,7 @@
 			{
 				exec:'length',
 				args:[6,35],
-				error:function(){return $.i18n.prop("register.class.notValidEmail");}
+				error:function(){return "无效的Email地址"}
 			},
 			 
 			{
@@ -28,7 +28,7 @@
 			     });
 			     return flag;
 			  },
-			  error:function(){return $.i18n.prop("register.class.emailExisted");}
+			  error:function(){return "Email地址已经存在"}
 			}
 		]);
 		 $.module.validator.add('#fm-regist-mobile-id-userName', [
@@ -63,14 +63,14 @@
 				exec:function(){
 					return this.val()!="";
 				},
-				error:$.i18n.prop("register.class.notNull")
+				error:"不可为空"
 			},
-			{exec:'length',args:[6,20],error:$.i18n.prop("register.class.pwdLimit3")},
+			{exec:'length',args:[6,20],error:"密码位数6-20"},
 			{
 				exec:function(){
 					return !(/\s/g.test(this.val()));
 				},
-				error:$.i18n.prop("register.class.pwdLimit3")
+				error:"密码位数6-20"
 			},
 			{
 				exec:function(){
@@ -82,7 +82,7 @@
 					/[\W|_]/g.test(_value) && _result++;
 					return _result >= 2;
 				},
-				error:$.i18n.prop("register.class.pwdLimit3")
+				error:"密码位数6-20"
 			},
 			{
 				exec:function(){
@@ -100,11 +100,11 @@
 				exec:function(){
 					return this.val()!="";
 				},
-				error:$.i18n.prop("register.class.notNull")
+				error:"不能为空"
 			},
 			{
 				exec:function(){return this.val() === $('#fm-regist-mobile-password').val();},
-				error:$.i18n.prop("register.class.pwdInconformity")
+				error:"密码不合法"
 			}
 		]);
 		
@@ -140,14 +140,14 @@
 				exec:function(){
 					return this.val()!="";
 				},
-				error:$.i18n.prop("register.class.notNull")
+				error:"不能为空"
 			},
-			{exec:'length',args:[6,20],error:$.i18n.prop("register.class.pwdLimit3")},
+			{exec:'length',args:[6,20],error:"密码长度6-20"},
 			{
 				exec:function(){
 					return !(/\s/g.test(this.val()));
 				},
-				error:$.i18n.prop("register.class.pwdLimit3")
+				error:"密码长度6-20"
 			},
 			{
 				exec:function(){
@@ -159,7 +159,7 @@
 					/[\W|_]/g.test(_value) && _result++;
 					return _result >= 2;
 				},
-				error:$.i18n.prop("register.class.pwdLimit3")
+				error:"密码长度6-20"
 			},
 			{
 				exec:function(){
@@ -178,11 +178,11 @@
 				exec:function(){
 					return this.val()!="";
 				},
-				error:$.i18n.prop("register.class.notNull")
+				error:"不能为空"
 			},
 			{
 				exec:function(){return this.val() === $('#fm-regist-email-password').val();},
-				error:$.i18n.prop("register.class.pwdInconformity")
+				error:"密码不合法"
 			}
 		]);
 		
@@ -202,7 +202,7 @@
 			     });
 			     return flag;
 			  },
-			  error:function(){return $.i18n.prop("register.class.verifyCodeError");}
+			  error:function(){return "校验码错误"}
 			}
         ]);
         
@@ -222,7 +222,7 @@
 			     });
 			     return flag;
 			  },
-			  error:function(){return $.i18n.prop("register.class.verifyCodeError");}
+			  error:function(){return "校验码错误"}
 			}
         ]);
 	}
@@ -246,7 +246,7 @@
 			     });
 			     return flag;
 			  },
-			  error:function(){return $.i18n.prop("register.class.mobileExisted");}
+			  error:function(){return "手机号错误"}
 			}
 		]);
 		$.module.validator.add('#fm-regist-checkcode', [
@@ -270,7 +270,7 @@
 			     });
 			     return flag;
 			  },
-			  error:function(){return $.i18n.prop("verify.class.unactive");}
+			  error:function(){return "未被激活"}
 			}
 		]);
 		 
@@ -312,11 +312,11 @@
 				ev.preventDefault();
 				return false;
 			}
-			if(!confirm($.i18n.prop("register.class.confirmRegister"))){
+			if(!confirm("请确认注册")){
                 return false;
             }
     
-            jQuery('#fm-regist-mobile-submit').val($.i18n.prop("register.class.registering"));
+            jQuery('#fm-regist-mobile-submit').val("注册中");
             jQuery('#fm-regist-mobile-submit').attr("disabled","disabled");
 			return true;
 		});
@@ -330,11 +330,11 @@
 				ev.preventDefault();
 				return false;
 			}
-			if(!confirm($.i18n.prop("register.class.confirmRegister"))){
+			if(!confirm("请确认注册")){
                 return false;
             }
     
-            jQuery('#fm-regist-email-submit').val($.i18n.prop("register.class.registering"));
+            jQuery('#fm-regist-email-submit').val("注册中");
             jQuery('#fm-regist-email-submit').attr("disabled","disabled");
 			return true;
 		});

@@ -67,4 +67,8 @@ class UserController {
 
         render view:'create'
     }
+
+    def register() {
+        render view:'register'
+    }
 }

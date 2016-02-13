@@ -6,7 +6,7 @@
    var i={};
    i.noempty={
       exec:function(){return f.trim(this.val())!=""},
-      error:$.i18n.prop("register.class.notNull")
+      error:"不能为空"
    };
    i.numberonly={
       exec:function(){return/^\d+$/i.test(f.trim(this.val()))},
@@ -277,7 +277,7 @@
             var g=e.attr("id");
             var f=d("#"+g+"-pstrength");
             if(!f.length){
-                 d('<span  class="tips-ok"></span><span id="'+g+'-pstrength" ><span id="'+g+'-pstrength-bar" class="safe-rank"><span  class="pstrength-bar-weak">'+$.i18n.prop("register.class.weak")+'</span><span id="pmiddle" class="pstrength-bar-middle">'+$.i18n.prop("register.class.middle")+'</span><span id="pstrong" class="pstrength-bar-strong">'+$.i18n.prop("register.class.strong")+'</span></span></span>').appendTo(e.parent())
+                 d('<span  class="tips-ok"></span><span id="'+g+'-pstrength" ><span id="'+g+'-pstrength-bar" class="safe-rank"><span  class="pstrength-bar-weak">weak</span><span id="pmiddle" class="pstrength-bar-middle">middle</span><span id="pstrong" class="pstrength-bar-strong">strong</span></span></span>').appendTo(e.parent())
             }
             e.on("keyup",function(){var i=a(e.val(),h);c(g,h,i)})
         },
@@ -303,10 +303,10 @@
         c--;
         d.data("count",c);
         if(c){
-           d.val("("+c+$.i18n.prop("register.class.regainVerifyCodeAfterSeconds"));
+           d.val("("+c+"regainVerifyCodeAfterSeconds");
            setTimeout(function(){a.call(d)},1000)
         }else{
-           d.val($.i18n.prop("register.class.regainVerifyCode")).removeClass("fm-button-disabled")
+           d.val("regainVerifyCode").removeClass("fm-button-disabled")
         }
     };
     b.extend(b.module.smssender,{
