@@ -71,4 +71,8 @@ class UserController {
     def register() {
         render view:'register'
     }
+
+    def check() {
+
+    }
 }
