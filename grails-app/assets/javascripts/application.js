@@ -8,7 +8,7 @@
 //= require jquery
 //= require_tree .
 //= require_self
-
+//= require mentisMenu
 if (typeof jQuery !== 'undefined') {
 	(function($) {
 		$('#spinner').ajaxStart(function() {
