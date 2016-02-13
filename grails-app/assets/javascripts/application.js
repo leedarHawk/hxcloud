@@ -9,6 +9,9 @@
 //= require_tree .
 //= require_self
 //= require mentisMenu
+//= require register
+//= require register-modules
+
 if (typeof jQuery !== 'undefined') {
 	(function($) {
 		$('#spinner').ajaxStart(function() {
