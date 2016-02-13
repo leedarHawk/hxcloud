@@ -8,6 +8,8 @@
 //= require jquery
 //= require_tree .
 //= require_self
+//= require register
+//= require register-modules
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {
