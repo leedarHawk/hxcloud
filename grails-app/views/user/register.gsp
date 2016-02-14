@@ -94,7 +94,7 @@
         <div class="acc-hd">
             <div class="wrap800">
                 <h1><a href="#"></a></h1>
-                <a href="/login.jsp" class="to-log">登录</a>
+                <a href="toLogin" class="to-log">登录</a>
             </div>
         </div>
         <div class="register">

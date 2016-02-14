@@ -12,6 +12,7 @@
 //= require register-modules
 //= require metisMenu
 //= require sb-admin-2
+//= require tools
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {

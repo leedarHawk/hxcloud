@@ -2,6 +2,7 @@ package hxcloud
 
 class User {
 
+    long custId
     String userName
     String mobile
     String email
