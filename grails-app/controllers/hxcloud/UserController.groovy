@@ -13,6 +13,7 @@ class UserController {
     def mailService
     def grailsApplication
     def redisService
+    def sysService
 
     def index() {
         def userList = User.list()
@@ -129,7 +130,7 @@ class UserController {
      * 校验手机验证码
      */
     def checkMobileCode() {
-
+        sysService.sendSMS("13683656989", "abcd987")
     }
 
     /**
